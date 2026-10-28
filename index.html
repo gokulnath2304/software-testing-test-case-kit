@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TestCraft | Test Case Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">SOFTWARE QA TOOLKIT</div>
+    <h1>TestCraft</h1>
+    <p>Plan test cases, track outcomes, and export a clean report.</p>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Add a test case</h2>
+      <form id="case-form">
+        <input id="title" placeholder="Test case title" required>
+        <textarea id="steps" placeholder="Test steps" required></textarea>
+        <input id="expected" placeholder="Expected result" required>
+        <input id="actual" placeholder="Actual result">
+        <div class="form-row">
+          <select id="status">
+            <option>Not Run</option><option>Pass</option><option>Fail</option><option>Blocked</option>
+          </select>
+          <select id="priority">
+            <option>Medium</option><option>High</option><option>Low</option>
+          </select>
+          <button type="submit">Add test case</button>
+        </div>
+      </form>
+    </section>
+    <section class="toolbar">
+      <input id="search" placeholder="Search test cases…">
+      <select id="filter">
+        <option value="All">All statuses</option><option>Not Run</option><option>Pass</option><option>Fail</option><option>Blocked</option>
+      </select>
+      <button id="export">Export CSV</button>
+    </section>
+    <section class="stats" id="stats"></section>
+    <section id="case-list" class="case-list" aria-live="polite"></section>
+  </main>
+  <footer>TestCraft starter project · Data stays in this browser unless exported.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
